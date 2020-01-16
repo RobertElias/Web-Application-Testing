@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Display } from "./Display";
 
 
 //provide a button that the person in charge can press every time there is a strike, ball, foul or hit.
@@ -40,6 +41,11 @@ export const Dashboard = () => {
     return (
         <div className="dash-container">
             <h1>Baseball Stadium Dashboard</h1>
+            <Display strikes={strikes} balls={balls}/>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
         </div>
     )
 
