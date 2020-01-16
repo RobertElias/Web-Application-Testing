@@ -12,6 +12,11 @@ export const Display = props => {
 
         <h1>Balls</h1>
         <div>{props.balls}</div>
+
+        <h1>Fouls</h1>
+        <div>{props.fouls}</div>
+        <h1>Hits</h1>
+        <div>{props.hits}</div>
       </section>
     </div>
   );

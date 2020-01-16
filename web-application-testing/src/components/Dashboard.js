@@ -8,6 +8,8 @@ import { Display } from "./Display";
 export const Dashboard = () => {
     const [strikes, setStrikes] = useState(0);
     const [balls, setBalls] = useState(0);
+    const [hits, setHits] = useState(0)
+    const [fouls, setFouls] = useState(0)
 
 
 
@@ -27,25 +29,32 @@ export const Dashboard = () => {
 
     //Foul Handler
     const Fouls = () => {
-        if (strikes < 2) {
-            setStrikes(strikes +1)
+        if (strikes < 2 && fouls <= 4) {
+            setStrikes(strikes +1);
+            setFouls(fouls + 1);
+            
         };
     };
 
     //Hit Hanlder
     const Hits = () => {
-        setStrikes(0)
-        setBalls(0)
-    }
+        if(hits => 0) {
+            setHits(hits + 1);
+            setStrikes(0);
+            setBalls(0);
+            setFouls(0);            
+        }       
+    };
 
     return (
         <div className="dash-container">
             <h1>Baseball Stadium Dashboard</h1>
-            <Display strikes={strikes} balls={balls}/>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <Display strikes={strikes} balls={balls} hits={hits} fouls={fouls}/>
+            <br></br>
+            <button onClick={Strikes}>Strikes</button>
+            <button onClick={Balls}>Balls</button>
+            <button onClick={Fouls}>Fouls</button>
+            <button onClick={Hits}>Hits</button>
         </div>
     )
 
