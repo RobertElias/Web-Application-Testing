@@ -29,7 +29,7 @@ export const Dashboard = () => {
 
     //Foul Handler
     const Fouls = () => {
-        if (strikes < 2 && fouls <= 4) {
+        if (strikes <= 2 && fouls < 4) {
             setStrikes(strikes +1);
             setFouls(fouls + 1);
             
@@ -42,7 +42,7 @@ export const Dashboard = () => {
             setHits(hits + 1);
             setStrikes(0);
             setBalls(0);
-            setFouls(0);            
+            setFouls(0)            
         }       
     };
 
